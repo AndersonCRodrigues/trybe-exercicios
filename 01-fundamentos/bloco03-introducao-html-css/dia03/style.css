@@ -24,5 +24,42 @@
 /* insira na classe abaixo uma borda com valor '5px solid black' para aplicá-la ao item D */
 .border {
   border: 5px solid black;
+}
+.super-mario {
+  width: 200px;
+  float: left;
+  position: absolute;
+  z-index: 1;
+}
 
+.goomba {
+  width: 100px;
+  float: left;
+  bottom: 250px;
+  left: 50px;
+  position: absolute;
+}
+
+.baloon {
+  position: absolute;
+  float: left;
+  left: 300px;
+  z-index: 1;
+}
+
+.speech {
+  font-size: 25px;
+  position: absolute;
+  float: left;
+  top: 290px;
+  left: 320px;
+  z-index: 2;
+}
+
+.bowser {
+  width: 200px;
+  position: absolute;
+  float: left;
+  top: 360px;
+  left: 600px;
 }
