@@ -1,44 +1,61 @@
-div:hover {
-  border: 2px solid black;
-}
-
-div:nth-of-type(1) {
+ol > li {
   background-color: yellow;
 }
 
-div:nth-of-type(2) {
+ol > li:nth-of-type(2n) {
+  color: green;
+}
+
+ol > li:nth-of-type(2n+1) {
+  text-transform: uppercase;
+}
+
+h1, h2, h3 {
+  color:red;
+}
+
+h1 em, h2 em, h3 em {
+  font-size: 40px;
+  border: 1px solid black;
+}
+
+li {
+  font-size: 20px;
+}
+
+li em {
+  font-weight: bold;
+}
+
+ul:nth-of-type(1) > li:nth-of-type(-n+3) {
+  color: blue;
+}
+
+.java {
+  background-color: pink;
+}
+
+ul:nth-of-type(2) > li:nth-of-type(1):hover {
+  background-color: orange;
+  font-weight: bold;
+}
+
+ul:nth-of-type(2) > li:nth-of-type(2):hover {
   background-color: green;
+  font-weight: bold;
 }
 
-div:nth-of-type(3) {
-  background-color: coral;
-  padding: 10px;
+ul:nth-of-type(2) > li:nth-of-type(3):hover {
+  background-color: black;
+  font-weight: bold;
 }
 
-div:nth-of-type(4) {
-  background-color: brown;
+ul:nth-of-type(2) > li:nth-of-type(4):hover {
+  background-color: yellow;
+  font-weight: bold;
 }
 
-div:nth-of-type(5) {
-  background-color: aqua;
-}
-
-div:nth-of-type(1) h3 {
-  font-family: 'Courier New', Courier, monospace;
-}
-div:nth-of-type(2) h3 {
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-div:nth-of-type(3) h3 {
-  font-family:'Times New Roman', Times, serif;
-}
-div:nth-of-type(4) h3 {
-  text-decoration:overline;
-}
-div:nth-of-type(5) h3 {
-  text-decoration:underline;
-}
-
-div:nth-of-type(2n+1) {
-  font-style: italic;
+ul:nth-of-type(2) > li:nth-of-type(5):hover {
+  background-color: green;
+  font-weight: bold;
 }
