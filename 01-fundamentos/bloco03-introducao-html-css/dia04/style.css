@@ -89,7 +89,7 @@ article img {
   border: 10px solid white;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 40px;
   margin-left: auto;
   margin-right: auto;
@@ -98,6 +98,7 @@ article img {
 
 article h3 {
   color: var(--cor4);
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.5em;
   text-shadow: 0px 0px 1px black;
   padding: 10px;
@@ -115,13 +116,6 @@ article p {
   padding: 10px;
   text-align: justify;
   font-size: 1.2em;
-}
-.destaca {
-  background-color: rgba(206, 205, 205, 0.274);
-}
-
-#referencia p {
-  font-weight: bold;
 }
 
 table {
@@ -164,6 +158,28 @@ table td {
   color: #1F467A;
 }
 
+#referencia p {
+  font-weight: bold;
+}
+
+.video {
+  margin: auto;
+  max-width: 1100px;
+  background-color:white;
+  padding-bottom: 40.7%;
+  position: relative;
+}
+
+.video iframe {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+}
+
 footer {
   background-color: var(--cor4);
   text-align: center;
@@ -174,6 +190,9 @@ footer {
 footer a, footer p {
   color: white;
   text-decoration: none;
+}
+footer a {
+  font-weight: 900;
 }
 
 footer a:hover {
