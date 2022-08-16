@@ -142,3 +142,21 @@ table td {
   text-decoration: underline;
   color: #1F467A;
 }
+
+footer {
+  background-color: var(--cor4);
+  text-align: center;
+  padding: 20px;
+}
+
+
+footer a, footer p {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  background-color: var(--cor0);
+  color: var(--cor4);
+  text-decoration: underline;
+}
