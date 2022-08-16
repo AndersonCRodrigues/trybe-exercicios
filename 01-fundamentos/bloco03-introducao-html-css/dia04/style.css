@@ -19,6 +19,7 @@ body {
 
 header {
   background-image: linear-gradient( to bottom, var(--cor1), var(--cor4));
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 header h1 {
@@ -26,9 +27,10 @@ header h1 {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-shadow: 1px 1px 5px black;
   text-align: center;
-  padding: 30px 0px;
-  font-size: 50px;
+  padding: 50px 0px;
+  font-size: 3em;
   margin: auto;
+  font-weight: bold;
 }
 
 header nav {
@@ -41,10 +43,102 @@ header a {
   color: white;
   margin: 10px;
   padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 5px;
 }
 
 header a:hover {
-  text-decoration: underline;
   background-color: var(--cor0);
   color: var(--cor4);
+}
+
+article {
+  background-color: white;
+  max-width: 1500px;
+  min-width: 300px;
+  margin: auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+article h2 {
+  color: var(--cor3);
+  text-align: center;
+  font-size: 2em;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+article img {
+  border: 10px solid white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 800px;
+  margin: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+article h3 {
+  color: var(--cor4);
+  font-size: 1.5em;
+  text-shadow: 0px 0px 1px black;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #8ABBFB;
+  text-align: center;
+}
+
+article p {
+  padding: 30px;
+  text-indent: 30px;
+  line-height: 25px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: justify;
+  font-size: 1.2em;
+}
+
+#referencia p {
+  font-weight: bold;
+}
+
+table {
+  border: 1px solid var(--cor4);
+  border-spacing: 0px;
+  margin: auto;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+table caption {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 5px;
+}
+
+table td {
+  border: 1px solid var(--cor4);
+  padding: 10px 20px;
+}
+
+.c_esq {
+  background-color: var(--cor4);
+  color: white;
+  border: 1px solid var(--cor0);
+  font-weight: bold;
+}
+
+.c_dir {
+  background-color: var(--cor0);
+}
+
+#referencia a {
+  text-decoration: none;
+  color: black;
+}
+
+#referencia a:hover {
+  text-decoration: underline;
+  color: #1F467A;
 }
