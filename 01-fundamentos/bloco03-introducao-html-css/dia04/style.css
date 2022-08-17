@@ -30,17 +30,7 @@ hgroup {
   margin: auto;
 }
 
-hgroup h1 {
-  color: rgb(255, 69, 1);
-  font-family: 'Kanit', sans-serif;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.589);
-  text-align: right;
-  font-size: 3.5em;
-  margin: auto;
-  font-weight: bold;
-}
-
-hgroup h2 {
+hgroup #titulo1 {
   color: orange;
   font-family: 'Bebas Neue', cursive;
   text-shadow: 2px 2px 5px black;
@@ -48,6 +38,16 @@ hgroup h2 {
   font-size: 3em;
   margin: auto;
   font-weight: normal;
+}
+
+hgroup #titulo2 {
+  color: rgb(255, 69, 1);
+  font-family: 'Kanit', sans-serif;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.589);
+  text-align: right;
+  font-size: 3.5em;
+  margin: auto;
+  font-weight: bold;
 }
 
 header nav {
