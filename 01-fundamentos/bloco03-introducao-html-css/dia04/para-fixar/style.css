@@ -1,0 +1,21 @@
+ul {
+  list-style: none;
+  text-align: center;
+}
+
+li {
+  margin: auto;
+}
+
+.second , .third {
+  display: inline-block;
+
+}
+
+h3 {
+  text-align: center;
+}
+
+#premio li {
+  display: inline;
+}
