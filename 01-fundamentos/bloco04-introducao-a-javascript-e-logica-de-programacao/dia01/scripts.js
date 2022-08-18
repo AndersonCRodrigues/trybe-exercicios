@@ -170,3 +170,61 @@ if ((valorCusto>=0)&&(valorVenda>=0)) {
 } else {
   console.log("Valores Inválidos");
 }
+
+//programa 11
+
+let salarioBase = 3000.00;
+let salarioReduzido = 0;
+let salarioFinal = 0;
+let inss = 0;
+let impostoRenda = 0;
+
+let inssAliquota8 = 556.94;
+let inssAliquota9 = 2594.92;
+let inssAliquota11 = 5189.82;
+
+let irAliquota7 = 1903.99;
+let irAliquota15 = 2826.66;
+let irAliquota22 = 3751.06;
+let irAliquota27 = 4664.68;
+
+let parcelaIr7 = 142.80;
+let parcelaIr15 = 354.80;
+let parcelaIr22 = 636.13;
+let parcelaIr27 = 869.36;
+
+if (salarioBase <= inssAliquota8) {
+  inss = salarioBase * 0.08;
+}
+else if ((salarioBase >inssAliquota8)&&(salarioBase<=inssAliquota9)){
+  inss = salarioBase * 0.09;
+}
+else if ((salarioBase > inssAliquota9)&&(salarioBase<=inssAliquota11)){
+  inss = salarioBase * 0.11;
+}
+else if (salarioBase > inssAliquota11){
+  inss = 570.88;
+}
+
+salarioReduzido = salarioBase - inss;
+
+if (salarioReduzido < irAliquota7){
+  salarioFinal = salarioReduzido;
+}
+else if ((salarioReduzido>=irAliquota7)&&(salarioReduzido < irAliquota15)){
+  impostoRenda = (salarioReduzido*0.075)-parcelaIr7;
+}
+else if ((salarioReduzido >= irAliquota7)&&(salarioReduzido < irAliquota22)){
+  impostoRenda = (salarioBase*0.15)-parcelaIr15;
+}
+else if ((salarioReduzido >= irAliquota22)&&(salarioReduzido < irAliquota27)) {
+  impostoRenda = (salarioReduzido*0.225) - parcelaIr22;
+}
+else if (salarioReduzido >= irAliquota22) {
+  impostoRenda = (salarioReduzido*0.275) - parcelaIr27;
+}
+
+salarioFinal = salarioReduzido - impostoRenda;
+console.log("Desconto do INSS R$", inss );
+console.log("Desconto do IR R$", impostoRenda);
+console.log("Salário com descontos R$", salarioFinal);
