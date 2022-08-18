@@ -64,3 +64,20 @@ else if (a<0) {
 else {
   console.log(a + " é nulo");
 }
+
+//programa 05
+
+let x = 90;
+let y = 45;
+let z = 45;
+let triangulo = true;
+
+if ((x>0) && (y>0) && (z>0) && ((x+y+z)<=180) ) {
+  console.log(triangulo);
+}
+else if ((x<0)||(y<0)||(z<0)){
+  console.log(!triangulo);
+}
+else {
+  console.log("entrada de angulos inválidos");
+}
