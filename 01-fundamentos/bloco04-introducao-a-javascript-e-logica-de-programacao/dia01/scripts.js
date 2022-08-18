@@ -156,3 +156,17 @@ console.log(resultado);
 
 resultado = ((num1%2!==0)||(num2%2!==0)||(num3%2!==0)) ? true : !true;
 console.log(resultado);
+
+//programa 10
+
+const valorCusto = 100;
+const valorVenda = 130;
+const imposto = 20/100;
+
+if ((valorCusto>=0)&&(valorVenda>=0)) {
+  let valorCustoTotal = valorCusto + (valorCusto * imposto);
+  let lucro = valorVenda - valorCustoTotal;
+  console.log(lucro*1000);
+} else {
+  console.log("Valores Inválidos");
+}
