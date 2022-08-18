@@ -85,9 +85,9 @@ else {
 //programa 06
 
 let peca = "RAINHA";
-let resultado = peca.toLocaleLowerCase();
+let result = peca.toLocaleLowerCase();
 
-switch (resultado) {
+switch (result) {
   case "peao":
     console.log("Peão -> vertical ou diagonal");
     break;
@@ -141,3 +141,13 @@ else if (nota>0 && nota<50){
 else {
   console.log("Entrada inválida");
 }
+
+//programa 08
+
+const num1 = 2;
+const num2 = 4;
+const num3 = 5;
+let resultado;
+
+resultado = ((num1%2!==0)||(num2%2!==0)||(num3%2!==0)) ? true : !true;
+console.log(resultado);
