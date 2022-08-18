@@ -81,3 +81,37 @@ else if ((x<0)||(y<0)||(z<0)){
 else {
   console.log("entrada de angulos inválidos");
 }
+
+//programa 06
+
+let peca = "peao";
+let resultado = peca.toLocaleLowerCase();
+
+switch (resultado) {
+  case "peao":
+    console.log("Peão -> vertical ou diagonal");
+    break;
+
+  case "torre":
+    console.log("Torre -> vertical ou horizontal");
+    break;
+
+  case "cavalo":
+    console.log("Cavalo -> dois horizontais e um vertical ou dois verticais e um horizontal");
+    break;
+
+  case "bispo":
+    console.log("Bispo -> Diagonais");
+    break;
+
+  case "rainha":
+    console.log("Rainha -> horizontais, verticais ou diagonais");
+    break;
+
+  case "rei":
+    console.log("Rei -> horizontal, vertical ou diagonal");
+    break;
+
+  default:
+    console.log("entrada inválida")
+}
