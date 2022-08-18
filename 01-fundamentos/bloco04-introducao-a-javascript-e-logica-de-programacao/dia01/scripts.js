@@ -72,10 +72,10 @@ let y = 45;
 let z = 45;
 let triangulo = true;
 
-if ((x>0) && (y>0) && (z>0) && ((x+y+z)<=180) ) {
+if ((x>0) && (y>0) && (z>0) && ((x+y+z)===180) ) {
   console.log(triangulo);
 }
-else if ((x<0)||(y<0)||(z<0)){
+else if ((x>0) && (y>0) && (z>0) && ((x+y+z)!==180)){
   console.log(!triangulo);
 }
 else {
@@ -84,7 +84,7 @@ else {
 
 //programa 06
 
-let peca = "peao";
+let peca = "RAINHA";
 let resultado = peca.toLocaleLowerCase();
 
 switch (resultado) {
@@ -114,4 +114,30 @@ switch (resultado) {
 
   default:
     console.log("entrada inválida")
+}
+
+//programa 07
+
+let nota = 49;
+
+if (nota >= 90) {
+  console.log("A");
+}
+else if (nota >= 80){
+  console.log("B");
+}
+else if (nota >= 70){
+  console.log("c");
+}
+else if (nota >= 60){
+  console.log("D");
+}
+else if (nota >= 50){
+  console.log("E");
+}
+else if (nota>0 && nota<50){
+  console.log("F");
+}
+else {
+  console.log("Entrada inválida");
 }
