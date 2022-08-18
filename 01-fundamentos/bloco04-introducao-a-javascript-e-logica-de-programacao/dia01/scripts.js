@@ -146,8 +146,13 @@ else {
 
 const num1 = 2;
 const num2 = 4;
-const num3 = 5;
+const num3 = 6;
 let resultado;
+
+resultado = ((num1%2===0)||(num2%2===0)||(num3%2===0)) ? true : !true;
+console.log(resultado);
+
+//programa 09
 
 resultado = ((num1%2!==0)||(num2%2!==0)||(num3%2!==0)) ? true : !true;
 console.log(resultado);
