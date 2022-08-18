@@ -24,3 +24,13 @@ switch (operacao) {
     default:
       console.log("Operação Inválida")
 }
+
+if (a > b) {
+
+  console.log(a + " maior que " + b);
+
+}
+
+else {
+  console.log(b + " maior que " + a);
+}
