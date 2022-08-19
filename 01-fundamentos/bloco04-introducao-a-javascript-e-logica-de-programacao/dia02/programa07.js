@@ -2,9 +2,9 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 let maior = 0;
 
-for (let i = 0; i < numbers.length; i += 1) {
-  if ((numbers[i] > maior) && (numbers[i] % 2 !== 0)) {
-    maior = numbers[i];
+for (let numero of numbers) {
+  if ((numero > maior) && (numero % 2 !== 0)) {
+    maior = numero;
   }
 }
 
