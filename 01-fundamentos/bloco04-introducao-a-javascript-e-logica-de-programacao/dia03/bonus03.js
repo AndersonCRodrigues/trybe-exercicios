@@ -1,7 +1,7 @@
 //Desenha triangulo contrário com asteríscos
 let n = 5;
 let star = "*";
-let desenho = '';
+let desenho = "";
 
 
 for (let i = 1; i <= n; i += 1){
