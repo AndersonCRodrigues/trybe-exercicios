@@ -1,4 +1,4 @@
-//Desenha quadrilátero com asteríscos
+//Desenha triangulo com asteríscos
 let n = 5;
 let star = "*";
 let temp = "";
