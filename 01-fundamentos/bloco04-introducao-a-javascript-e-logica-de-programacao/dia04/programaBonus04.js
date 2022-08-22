@@ -30,7 +30,7 @@ let moradores = {
 };
 
 let bloco2 = moradores.blocoDois;
-let bloco2_2 = moradores.blocoDois[moradores.blocoDois.length-1];
+let bloco2_2 = moradores.blocoDois[1];
 console.log("O morador do bloco 2 de nome", bloco2_2.nome, bloco2_2.sobrenome,"mora no", bloco2_2.andar, "andar, apartamento",bloco2_2.andar);
 
 let bloco1 = moradores.blocoUm;
