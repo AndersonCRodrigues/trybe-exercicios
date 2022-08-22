@@ -12,7 +12,7 @@ function testa (inicio,fim) {
   }
 }
 
-let palavra = "trybe";
-let parte = "be";
+let palavra = "joaofernando";
+let parte = "fernan";
 
 console.log(testa(palavra,parte));
