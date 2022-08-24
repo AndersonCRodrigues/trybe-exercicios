@@ -10,12 +10,12 @@ const numerosRomanos = {
 
 function romanoParaDecimal(numero) {
   numero = numero.toLowerCase();
-  const len = numero.length;
-  let soma = numerosRomanos[numero[len - 1]];
-  let atual = numerosRomanos[numero[len - 1]];
+  let tamanho = numero.length;
+  let soma = numerosRomanos[numero[tamanho - 1]];
+  let atual = numerosRomanos[numero[tamanho - 1]];
 
-  for (let i = 2; i <= len; i += 1) {
-    const prox = numerosRomanos[numero[len - i]];
+  for (let i = 2; i <= tamanho; i += 1) {
+    const prox = numerosRomanos[numero[tamanho - i]];
 
     if (atual <= prox) {
       soma += prox;
