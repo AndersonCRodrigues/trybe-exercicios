@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let h1 = document.createElement('h1');
+      h1.innerText = "Aqui vai o h1";
+      let body = document.querySelector('body');
+      body.appendChild(h1);
+      let main = document.createElement('main');
+      main.className = 'main-content'
+      body.appendChild(main);
+      let centerContent = document.createElement('section');
+      centerContent.className = 'center-content';
+      main.appendChild(centerContent);
+      let paragrafo = document.createElement('p');
+      paragrafo.innerText = 'Aqui vai o paragrafo dentro de section';
+      centerContent.appendChild(paragrafo);
+      let leftContent = document.createElement('section');
+      leftContent.className = 'left-content';
+      main.appendChild(leftContent);
+      let rightContent = document.createElement('section');
+      rightContent.className = 'right-content';
+      main.appendChild(rightContent);
+      let image = document.createElement('img');
+      image.className = 'small-image';
+      image.src = 'https://picsum.photos/200';
+      leftContent.appendChild(image);
+      let listaNaoOrdenada = document.createElement('ul');
+      for (let i = 1; i <= 10; i += 1){
+        let item = i;
+        let listItem = document.createElement('li');
+        listItem.innerText = item;
+        listaNaoOrdenada.appendChild(listItem);
+      }
+      rightContent.appendChild(listaNaoOrdenada);
+      let h3 = document.createElement('h3');
+      h3.innerText = 'Aqui vai o h3';
+      main.appendChild(h3);
+      h1.className = 'title';
+      h3.className = 'description';
+      main.removeChild(leftContent);
+      rightContent.style.marginRight = 'auto';
+      centerContent.style.background = 'green';
+      for (let i = 0; i < 2; i += 1){
+        let ultimo = listaNaoOrdenada.lastElementChild;
+        listaNaoOrdenada.removeChild(ultimo);
+      }
+    </script>
+  </body>
+</html>
