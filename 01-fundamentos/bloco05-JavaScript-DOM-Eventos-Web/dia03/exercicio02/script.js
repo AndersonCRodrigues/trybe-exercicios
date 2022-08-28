@@ -112,3 +112,13 @@ function addTasks() {
 
 const taskInput = document.querySelector('#task-input');
 taskInput.addEventListener('change', addTasks);
+
+//Desafio 08
+function fontColor(cor) {
+  const myTasks = document.querySelector('.my-tasks');
+  const div = document.createElement('div');
+  div.className = 'task';
+  div.style.backgroundColor = `${cor}`;
+  myTasks.appendChild(div);
+}
+fontColor('red')
