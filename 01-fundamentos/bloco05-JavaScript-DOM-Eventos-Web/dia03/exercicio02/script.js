@@ -108,7 +108,6 @@ function addTasks(task) {
   myTasks.appendChild(text);
 }
 
-
 addTasks('Projeto:');
 
 //Desafio 08
@@ -128,3 +127,18 @@ function selectTask() {
 
 const task = document.querySelector('.task');
 task.addEventListener('click', selectTask);
+
+//Desafio 10
+function selectDay(origin) {
+  const task = document.querySelector('.task');
+  const taskColor = task.style.backgroundColor;
+  if (task.classList.contains('selected')){
+    if (origin.target.style.color !== taskColor) {
+      origin.target.style.color = taskColor;
+    } else {
+      origin.target.style.color = 'rgb(119,119,119)';
+    }
+  }
+}
+
+monthDays.addEventListener('click', selectDay);
