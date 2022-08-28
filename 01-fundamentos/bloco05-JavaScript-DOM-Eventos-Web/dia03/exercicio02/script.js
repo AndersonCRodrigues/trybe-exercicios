@@ -19,7 +19,7 @@ let decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 1
 preencheDias(decemberDaysList);
 
 function preencheDias(days) {
-  let monthDays = document.querySelector('#days');
+  const monthDays = document.querySelector('#days');
   for (let i = 0; i < days.length; i += 1) {
     let daysList = document.createElement('li');
     daysList.innerText = days[i];
@@ -74,14 +74,30 @@ let btnFriday = addFridayButton();
 function changeName() {
 const fridays = document.querySelectorAll('.friday');
 let diaCerto = 4;
-for (let i = 0; i < fridays.length; i += 1) {
-  if (fridays[i].innerText === 'Sextou') {
-    fridays[i].innerText = diaCerto;
-    diaCerto += 7;
-  } else {
-    fridays[i].innerText = 'Sextou';
+  for (let i = 0; i < fridays.length; i += 1) {
+    if (fridays[i].innerText === 'Sextou') {
+      fridays[i].innerText = diaCerto;
+      diaCerto += 7;
+    } else {
+      fridays[i].innerText = 'Sextou';
+    }
   }
-}
 }
 
 btnFriday.addEventListener('click', changeName);
+
+//Desafio 06
+function mouseOverDays(origin){
+  origin.target.style.fontSize = '25px';
+  origin.target.style.color = 'blue';
+}
+
+function mouseOutDays(origin) {
+  origin.target.style.fontSize = '20px';
+  origin.target.style.color = '#777';
+}
+
+
+const monthDays = document.querySelector('#days');
+monthDays.addEventListener('mouseover', mouseOverDays);
+monthDays.addEventListener('mouseout', mouseOutDays);
