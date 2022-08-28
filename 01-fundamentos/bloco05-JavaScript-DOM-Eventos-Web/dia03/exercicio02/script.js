@@ -69,3 +69,19 @@ function addFridayButton() {
 }
 
 let btnFriday = addFridayButton();
+
+//Desafio 05
+function changeName() {
+const fridays = document.querySelectorAll('.friday');
+let diaCerto = 4;
+for (let i = 0; i < fridays.length; i += 1) {
+  if (fridays[i].innerText === 'Sextou') {
+    fridays[i].innerText = diaCerto;
+    diaCerto += 7;
+  } else {
+    fridays[i].innerText = 'Sextou';
+  }
+}
+}
+
+btnFriday.addEventListener('click', changeName);
