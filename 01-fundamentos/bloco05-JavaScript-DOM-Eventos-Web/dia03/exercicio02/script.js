@@ -101,17 +101,15 @@ monthDays.addEventListener('mouseover', mouseOverDays);
 monthDays.addEventListener('mouseout', mouseOutDays);
 
 //Desafio 07
-function addTasks() {
+function addTasks(task) {
   const myTasks = document.querySelector('.my-tasks');
   const text = document.createElement('span');
-  text.style.display = 'block';
-  text.innerText = taskInput.value;
+  text.innerText = task;
   myTasks.appendChild(text);
-  taskInput.value = '';
 }
 
-const taskInput = document.querySelector('#task-input');
-taskInput.addEventListener('change', addTasks);
+
+addTasks('Projeto:');
 
 //Desafio 08
 function fontColor(cor) {
@@ -122,3 +120,11 @@ function fontColor(cor) {
   myTasks.appendChild(div);
 }
 fontColor('red')
+
+//Desafio 09
+function selectTask() {
+  task.classList.toggle('selected');
+}
+
+const task = document.querySelector('.task');
+task.addEventListener('click', selectTask);
