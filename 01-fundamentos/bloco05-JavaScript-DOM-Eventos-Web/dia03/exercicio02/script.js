@@ -89,15 +89,26 @@ btnFriday.addEventListener('click', changeName);
 //Desafio 06
 function mouseOverDays(origin){
   origin.target.style.fontSize = '25px';
-  origin.target.style.color = 'blue';
 }
 
 function mouseOutDays(origin) {
   origin.target.style.fontSize = '20px';
-  origin.target.style.color = '#777';
 }
 
 
 const monthDays = document.querySelector('#days');
 monthDays.addEventListener('mouseover', mouseOverDays);
 monthDays.addEventListener('mouseout', mouseOutDays);
+
+//Desafio 07
+function addTasks() {
+  const myTasks = document.querySelector('.my-tasks');
+  const text = document.createElement('span');
+  text.style.display = 'block';
+  text.innerText = taskInput.value;
+  myTasks.appendChild(text);
+  taskInput.value = '';
+}
+
+const taskInput = document.querySelector('#task-input');
+taskInput.addEventListener('change', addTasks);
