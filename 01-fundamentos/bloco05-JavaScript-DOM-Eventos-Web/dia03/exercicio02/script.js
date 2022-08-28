@@ -20,6 +20,11 @@ function preencheDias(days) {
   for (let i = 0; i < days.length; i += 1) {
     let daysList = document.createElement('li');
     daysList.innerText = days[i];
+    daysList.classList.add('day')
+    if (days[i] === 24 || days[i] === 25 || days[i] === 31) {
+      daysList.classList.add('holiday'); }
+    if (days[i] === 4 || days[i] === 11 || days[i] === 18 || days[i] === 25) {
+      daysList.classList.add('friday'); }
     monthDays.appendChild(daysList);
   }
 }
@@ -38,3 +43,15 @@ function addHollyDayButton() {
 
 let button = addHollyDayButton();
 
+function changeColorHoliDay() {
+  const holiDays = document.querySelectorAll('.holiday')
+  for (let i = 0; i < holiDays.length; i += 1) {
+    if (holiDays[i].style.background === 'white') {
+    holiDays[i].style.background = 'rgb(238,238,238)';
+    } else {
+      holiDays[i].style.background = 'white';
+    }
+  }
+}
+
+button.addEventListener('click', changeColorHoliDay);
