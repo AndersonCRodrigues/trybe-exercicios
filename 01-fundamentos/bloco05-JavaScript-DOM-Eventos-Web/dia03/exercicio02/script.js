@@ -156,5 +156,11 @@ function addCompromisso() {
   }
 }
 
+function identificaTecla(tecla) {
+  if (tecla.key === 'Enter') alert('erro ao clicar em "ADICIONAR".');
+}
+
 const taskInput = document.querySelector('#task-input');
 taskInput.addEventListener('change', addCompromisso);
+
+taskInput.addEventListener('keyup', identificaTecla);
