@@ -142,3 +142,19 @@ function selectDay(origin) {
 }
 
 monthDays.addEventListener('click', selectDay);
+
+//Desafio Bônus
+function addCompromisso() {
+  const listTask = document.querySelector('.task-list');
+  const itemListTask = document.createElement('li');
+  if (taskInput.value === '') {
+    alert('erro ao clicar em "ADICIONAR".');
+  } else {
+    itemListTask.innerText = taskInput.value;
+    listTask.appendChild(itemListTask);
+    taskInput.value = '';
+  }
+}
+
+const taskInput = document.querySelector('#task-input');
+taskInput.addEventListener('change', addCompromisso);
