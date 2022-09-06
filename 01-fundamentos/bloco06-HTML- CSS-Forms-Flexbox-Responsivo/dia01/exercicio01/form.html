@@ -4,10 +4,59 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Trybe Trip</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <h1>Trybe Trip</h1>
+  </header>
+  <main>
+    <form action="" method="post">
+      <section class="form-container">
+        <label for="nome">Nome: </label>
+        <input required type="text" name="nome" id="nome" minlength="10" maxlength="40">
+        <label for="e-mail">Email:</label>
+        <input required type="text" name="e-mail" id="e-mail" minlength="10" maxlength="50">
+      </section>
+      <section class="form-container">
+        <label for="foto">Adicione uma foto</label>
+        <input type="file" name="foto" id="foto">
+        <br>
+        <input type="checkbox" required>
+        <label for="autorizar">Autoriza o uso da imagem?</label>
+      </section>
+      <section class="form-container">
+        <input type="radio" name="destino" id="cidade">
+        <label for="cidade">Cidade</label>
+        <input type="radio" name="destino" id="campo">
+        <label for="campo">Campo</label>
+        <input type="radio" name="destino" id="praia">
+        <label for="praia">Praia</label>
+        <input type="radio" name="destino" id="montanhas">
+        <label for="montanhas">Montanhas</label>
+      </section>
+      <section class="form-container">
+        <label for="motivo">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>
+        <textarea name="motivo" id="motivo" maxlength="500"></textarea>
+      </section>
+      <section class="form-container">
+        <label for="data">Data:</label>
+        <input type="date" name="data" id="data">
+      </section>
+      <section class="form-container">
+        <input type="checkbox" name="noticias" id="noticias">
+        <label for="noticias">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+        <br>
+        <input type="checkbox" name="concordo" id="concordo">
+        <label for="concordo">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+      </section>
+      <section class="form-container">
+        <button type="submit">Submit</button>
+        <button type="reset">Apagar</button>
+      </section>
+    </form>
+  </main>
 <script src="script.js"></script>
 </body>
 </html>
