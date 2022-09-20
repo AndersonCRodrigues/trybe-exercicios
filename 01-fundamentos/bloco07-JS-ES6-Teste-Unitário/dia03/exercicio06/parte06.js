@@ -5,4 +5,6 @@ const hydrate = (frase) => {
   return (total < 2 ? `${total} copo de água` : `${total} copos de água`);
 };
 
-console.log(hydrate('1 copo de catuaba, 1 cervejas e 1 copo de vinho'));
+// console.log(hydrate('1 copo de catuaba, 1 cervejas e 1 copo de vinho'));
+
+module.exports = hydrate;
