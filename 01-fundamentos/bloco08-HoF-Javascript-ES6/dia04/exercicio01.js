@@ -6,7 +6,7 @@ const arrays = [
 
 function flatten() {
   // escreva seu código aqui
-  return arrays.reduce((acc, act) => acc.concat(act), []);
+  return arrays.reduce((acc, act) => [...acc, ...act]);
 };
 
 console.log(flatten());
