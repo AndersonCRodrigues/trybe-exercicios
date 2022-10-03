@@ -51,13 +51,11 @@ const testInfo = (id, detail) => {
 
 // Pesquisa
 const searchEmployee = (id, detail) => {
-  let informacao = '';
-  try {
+    try {
     testInfo(id, detail);
-    professionalBoard.forEach(element => {
-     if (element.id === id) informacao = element[detail];
-    });
-    return informacao;
+    const [informacao] = professionalBoard.filter(element => element.id === id);
+    console.log(informacao);
+    // return informacao[detail];
   }
   catch (e){
     return e.message;

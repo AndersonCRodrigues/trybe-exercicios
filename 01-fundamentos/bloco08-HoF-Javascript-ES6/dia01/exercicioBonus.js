@@ -42,36 +42,38 @@ const mageDmg = ({mage}) => {
   return {dmg, mana: 'Não possui mana suficiente'};
 };
 
+const funcDmg = {dragonDmg, warriorDmg, mageDmg};
+
 // parte II
 
 const gameActions = {
   // Crie as HOFs neste objeto.
-  warriorTurn: (members, action) => {
-    members.warrior.damage = action(members);
+  warriorTurn: (members, {warriorDmg}) => {
+    members.warrior.damage = warriorDmg(members);
     members.dragon.healthPoints -= members.warrior.damage;
   },
-  mageTurn: (members, action) => {
-    let status = action(members);
+  mageTurn: (members, {mageDmg}) => {
+    let status = mageDmg(members);
     members.mage.mana = status.mana;
     members.mage.damage = status.dmg;
     if (Number.isInteger(members.mage.damage)) members.dragon.healthPoints -= members.mage.damage;
   },
-  dragonTurns: (members, action) => {
-    members.dragon.damage = action(members);
+  dragonTurns: (members, {dragonDmg}) => {
+    members.dragon.damage = dragonDmg(members);
     members.mage.healthPoints -= members.dragon.damage;
     members.warrior.healthPoints -= members.dragon.damage;
   },
-  atualizaStatus: (members) => {
+  atualizaStatus: (members, callback) => {
     let turno = 1;
     while (members.dragon.healthPoints > 0 && members.mage.healthPoints > 0 && members.warrior.healthPoints > 0) {
-      gameActions.warriorTurn(members, warriorDmg);
-      gameActions.mageTurn(members, mageDmg);
-      gameActions.dragonTurns(members, dragonDmg);
+      gameActions.warriorTurn(members, callback);
+      gameActions.mageTurn(members, callback);
+      gameActions.dragonTurns(members, callback);
       console.log(`---=== Turno ${turno} ===---`);
       turno += 1;
       console.log(members);
-    }
+    };
   },
 };
 
-gameActions.atualizaStatus(battleMembers);
+gameActions.atualizaStatus(battleMembers, funcDmg);

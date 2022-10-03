@@ -116,9 +116,10 @@ function someBookWasReleaseOnThe80s(array) {
 
 function authorUnique() {
   return books.every((book) =>
-    !books.some((bookSome) =>
-      (bookSome.author.birthYear === book.author.birthYear)
+    books.some((bookSome) =>
+      !(bookSome.author.birthYear === book.author.birthYear)
       && (bookSome.author.name !== book.author.name)));
 };
 
 console.log(authorUnique());
+

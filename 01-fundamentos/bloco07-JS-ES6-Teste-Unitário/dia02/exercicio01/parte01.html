@@ -16,9 +16,9 @@
   <p id='result'></p>
   <script>
     function teste (a, b) {
-      if (isNaN(a) || isNaN(b)) throw new Error ('Os valores devem ser números!');
-      if (!(a % 1 === 0) || !(b % 1 === 0)) throw new Error ('Insira números interiros!');
-      if (!a || !b) throw new Error ('Insira valores válidos');
+      if (isNaN(a) || isNaN(b)) throw new Error ('ERRO 01 - Valores inválidos');
+      if (!(a % 1 === 0) || !(b % 1 === 0)) throw new Error ('ERRO 02 - Valores inválidos');
+      if (!a || !b) throw new Error ('ERRO 03 - Valores inválidos');
     }
 
     function sum() {

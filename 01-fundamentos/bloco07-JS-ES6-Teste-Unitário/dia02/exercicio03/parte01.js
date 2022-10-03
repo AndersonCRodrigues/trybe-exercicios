@@ -109,6 +109,4 @@ const relatorio = (obj, nome) => {
   }
 };
 
-
-
 relatorio(allLessons, 'Maria Clara');

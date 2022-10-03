@@ -1,3 +1,15 @@
-const sum = (...n) => n.reduce((acc, curr) => acc + curr);
+const calcIMC = (peso, altura) => (peso/altura * 2).toFixed(2);
 
-console.log(sum(4,5,6));
+const patienteData= ({nome,idade,altura,peso}) => {
+  adriana.imc = calcIMC(altura,peso);
+  console.log(adriana);
+};
+
+const adriana = {
+  nome: 'adriana',
+  idade: 26,
+  altura: 1.55,
+  peso: 63
+}
+
+patienteData(adriana);
