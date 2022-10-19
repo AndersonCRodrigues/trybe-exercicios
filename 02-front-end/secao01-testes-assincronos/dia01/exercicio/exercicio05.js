@@ -1,4 +1,4 @@
-// const imprime = (string) => console.log(string);
+const imprime = (string) => console.log(string);
 
 const uppercase = (str, callback) => {
   setTimeout(() => {
@@ -6,4 +6,6 @@ const uppercase = (str, callback) => {
   }, 500);
 };
 
-module.exports = uppercase;
+// uppercase('oi', imprime);
+
+module.exports = { uppercase, imprime };
