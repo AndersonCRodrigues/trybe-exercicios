@@ -1,32 +1,55 @@
 import { legacy_createStore as createStore } from 'redux';
 import { composeWithDevTools } from '@redux-devtools/extension';
 
-// 1. Criando o Reducer com Estado Inicial
-const INITIAL_STATE = { count: 0 };
-
-const reducer = (state = INITIAL_STATE, action) => {
-  if (action.type === 'INCREMENT_COUNTER') {
-    return { count: state.count + 1 };
-  }
-  return state;
+const INITIAL_STATE = {
+  colors: ['white', 'black', 'red', 'green', 'blue', 'yellow'],
+  index: 0,
 };
 
-// 2. Criando a Store já com Redux Devtools
+const reducer = (state = INITIAL_STATE, action) => {
+  switch (action.type) {
+    case 'NEXT_COLOR':
+      return {
+        ...state,
+        index: action.payload,
+      };
+    case 'PREVIOUS_COLOR':
+      return {
+        ...state,
+        index: action.payload,
+      };
+    default:
+      return state;
+  }
+};
+
 const store = createStore(reducer, composeWithDevTools());
 
-// 3. Criando a Action
-const action = { type: 'INCREMENT_COUNTER' };
+const next = () => {
+  const { colors, index } = store.getState();
+  const payload = index === colors.length - 1 ? 0 : index + 1;
+  return {type: 'NEXT_COLOR', payload};
+}
 
-// 4. Disparando a Action
-const buttonEl = document.querySelector('button');
-buttonEl.addEventListener('click', () => store.dispatch(action));
+const prev = () => {
+  const { colors, index } = store.getState();
+  const payload = index === 0 ? colors.length - 1 : index - 1;
+  return {type: 'PREVIOUS_COLOR', payload};
+}
 
-// 5. Lendo do Estado global
+const btnPrevious = document.getElementById('previous');
+const btnNext = document.getElementById('next');
+
+btnPrevious.addEventListener('click', () => {
+  store.dispatch(prev());
+});
+
+btnNext.addEventListener('click', () => {
+  store.dispatch(next());
+});
+
 store.subscribe(() => {
-  const globalState = store.getState();
-
-  const countEl = document.querySelector('h2');
-  countEl.innerHTML = globalState.count;
-
-  console.log('Estado atualizado !');
+  const { colors, index } = store.getState();
+  document.getElementById('value').innerHTML = colors[index];
+  document.getElementById('container').style.backgroundColor = colors[index];
 });
